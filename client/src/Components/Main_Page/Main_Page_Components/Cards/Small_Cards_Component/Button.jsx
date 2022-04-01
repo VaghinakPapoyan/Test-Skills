@@ -97,8 +97,8 @@ export default function Button({ setCards, cards, setNext }) {
 
     return (
           <SliderControl>
-              <SliderButton disabled={!active} onClick={Prev}><SliderIcon src='/images/Main_Page_Icons/Arrow_Right.png'/></SliderButton>
-              <SliderButton disabled={!active} onClick={Next}><SliderIcon src='/images/Main_Page_Icons/Arrow_Right.png'/></SliderButton>
+              <SliderButton disabled={!active} onClick={Prev}><SliderIcon src={process.env.PUBLIC_URL + '/images/Main_Page_Icons/Arrow_Right.png'}/></SliderButton>
+              <SliderButton disabled={!active} onClick={Next}><SliderIcon src={process.env.PUBLIC_URL + '/images/Main_Page_Icons/Arrow_Right.png'}/></SliderButton>
           </SliderControl>
     )
 }

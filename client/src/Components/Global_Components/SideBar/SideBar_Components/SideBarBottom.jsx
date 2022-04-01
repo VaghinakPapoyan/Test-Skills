@@ -75,8 +75,8 @@ export default function SideBarButton()
   return (
     <StyledSideBarBottom>
       <Container>
-        <Cube src='/images/Header_Icons/Cube.png'/>
-        <CubeShadow src='/images/Header_Icons/Cube.png'/>
+        <Cube src={process.env.PUBLIC_URL + '/images/Header_Icons/Cube.png'}/>
+        <CubeShadow src={process.env.PUBLIC_URL + '/images/Header_Icons/Cube.png'}/>
         <Text>Upgrade Your Dashboard</Text>
         <ThisButton>Upgrade</ThisButton>
       </Container>

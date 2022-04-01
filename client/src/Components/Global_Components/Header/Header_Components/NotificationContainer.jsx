@@ -138,7 +138,7 @@ export default function NotificationContainer({secondNotificationActive})
     const notifications = useSelector(state => state.notifications.notifications)
     return (
         <>
-            <Notification animate={(!!notifications.length && !notificationActive)} onClick={() => setNotificationActive(state => !state)} src='images/Header_Icons/Notification.png' />
+            <Notification animate={(!!notifications.length && !notificationActive)} onClick={() => setNotificationActive(state => !state)} src={process.env.PUBLIC_URL + '/images/Header_Icons/Notification.png'} />
             <NotificationDropdown notifications={notifications} active={notificationActive || secondNotificationActive}/>
         </>
     )

@@ -36,7 +36,6 @@ export default async function registrationController(req, res)
         const verificationLink = v4();
         const user = await USER.create({ username, nickname, email, password: hashedPassword, verificationLink })
         const notifications = await NOTIFICATIONS.create({ userId: user._id, title: "Verification", text: "Pls verify your account for first", date: Date.now(), href: "/account/verification" })
-        console.log(notifications);
         const token = jwt.sign({ userId: user._id }, process.env.tokenSecret, { expiresIn: "10d" })
 
         return res.status(200).json({

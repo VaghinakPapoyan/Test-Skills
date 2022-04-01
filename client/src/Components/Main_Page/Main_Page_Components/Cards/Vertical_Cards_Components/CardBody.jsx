@@ -88,7 +88,7 @@ export default function CardBody({ title, user, info }) {
     <StyledCardBody>
       <CardBodyBackground />
       <Title>{title}</Title>
-      <User><UserLogo src={user.logo} />{user.username}</User>
+      <User><UserLogo src={process.env.PUBLIC_URL + user.logo} />{user.username}</User>
       <Info>
         <InfoLeft>{info.left}</InfoLeft>
         <InfoRight>{info.right}</InfoRight>

@@ -69,10 +69,10 @@ export default function Profile() {
 
    return (
       <StyledProfile>
-         <Logo src='images/Header_Icons/Logo.png'/>
+         <Logo src={process.env.PUBLIC_URL + '/images/Header_Icons/Logo.png'}/>
          <ProfileInfo onClick={() => setDropdownActive(state => !state)}>
-            <Name>{user.username || "Isn't Registered."}<ArrowBottom active={dropdownActive} src='images/Header_Icons/Arrow_bottom.png'/></Name>
-            <Level>{user.level ? <><Fire src="\images\Header_Icons\fire.png"/>{user.level} level</> : "Registration or Login"}</Level>
+            <Name>{user.username || "Isn't Registered."}<ArrowBottom active={dropdownActive} src={process.env.PUBLIC_URL + '/images/Header_Icons/Arrow_bottom.png'}/></Name>
+            <Level>{user.level ? <><Fire src={process.env.PUBLIC_URL + "\\images\\Header_Icons\\fire.png"}/>{user.level} level</> : "Registration or Login"}</Level>
          </ProfileInfo>
          <NotificationContainer secondNotificationActive={secondNotificationActive} />
          <ProfileDropdown setDropdownActive={setDropdownActive} setSecondNotificationActive={setSecondNotificationActive} authored={user.authored} active={dropdownActive}/>

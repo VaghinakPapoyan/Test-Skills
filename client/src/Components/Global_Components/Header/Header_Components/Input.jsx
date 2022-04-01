@@ -41,7 +41,7 @@ export default function Input({ children }) {
     return (
         <InputDiv>
             <StyledInput placeholder={children}/>
-            <SearchIcon src='images/Header_Icons/Search.png'/>
+            <SearchIcon src={process.env.PUBLIC_URL + '/images/Header_Icons/Search.png'}/>
         </InputDiv>
     )
 }

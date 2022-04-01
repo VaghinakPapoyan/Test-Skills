@@ -124,7 +124,7 @@ const StyledNotification = styled.div`
 export default function Notification({ userImg, title, subTitle, date, tag }) {
   return (
     <StyledNotification>
-      <UserImg src={userImg}/>
+      <UserImg src={process.env.PUBLIC_URL + userImg}/>
       <Info>
         <Title>{title}</Title>
         <SubTitle>{subTitle}</SubTitle>
