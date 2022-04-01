@@ -61,7 +61,7 @@ const Text = styled.p`
   text-align: center;
   margin-top: -35px;
 `
-const ThisButton = styled(Button)` 
+export const ThisButton = styled(Button)` 
   margin-top: 20px;
   margin-bottom: 23.5px;
   position: relative;

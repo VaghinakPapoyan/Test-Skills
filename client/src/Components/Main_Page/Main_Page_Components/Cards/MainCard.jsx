@@ -1,4 +1,5 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 import styled from 'styled-components'
 import { Button } from '../../../../Style_Settings/globalComponents'
 
@@ -174,8 +175,9 @@ const MyButton = styled(Button)`
   }
 `
 
-
-export default function MainCard() {
+export default function MainCard() 
+{
+  const navigate = useNavigate()
   return (
     <StyledMainCard>
       <MainCardBody>
@@ -197,7 +199,7 @@ export default function MainCard() {
             <InfoText>Artist</InfoText>
           </Info>
         </Infos>
-        <MyButton>Explore Now</MyButton>
+        <MyButton onClick={() => navigate("/games/snake-game")}>Explore Now</MyButton>
       </MainCardBody>
     </StyledMainCard>
   )

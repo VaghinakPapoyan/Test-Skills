@@ -7,6 +7,7 @@ import SideBar from './Global_Components/SideBar/SideBar.jsx'
 import Form from './Form/Form.jsx'
 import { useSelector } from 'react-redux'
 import MainLoading from './Loading/MainLoading.jsx'
+import Snake from '../Games/Snake/Snake.jsx'
 
 const RightSide = styled.div`
     width: 100% !important;
@@ -38,6 +39,7 @@ export default function MainRoutes()
                                 ?
                                     <>
                                         <Route path='/account/verification' element={<Form login={false} verification={true} verified={verified} />} />
+                                        <Route path='/games/snake-game' element={<Snake />} />
                                     </>
                                 :
                                 <>
